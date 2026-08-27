@@ -14,7 +14,10 @@
 	<name>bookStore</name>
 	<description>This is book store project</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>25</java.version>
+		<maven.compiler.release>25</maven.compiler.release>
+		<maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -50,6 +53,16 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
